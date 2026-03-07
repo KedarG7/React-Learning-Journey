@@ -1,0 +1,15 @@
+.page1 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 24px;
+  color: white;
+}
+@media (max-width: 480px) {
+  .page1 {
+    background-color: blue;
+  }
+}/*# sourceMappingURL=global.css.map */

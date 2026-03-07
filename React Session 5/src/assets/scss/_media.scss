@@ -1,0 +1,10 @@
+$max-width:480px;
+
+@mixin mobile{
+    @media(max-width:#{$max-width}){
+
+        @content;
+
+    }
+    
+}

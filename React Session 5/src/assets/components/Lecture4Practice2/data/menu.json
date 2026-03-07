@@ -1,0 +1,426 @@
+[
+  {
+    "id": 1,
+    "name": "Tea",
+    "price": 10,
+    "category": "Beverages",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 2,
+    "name": "Lemon Tea",
+    "price": 10,
+    "category": "Beverages",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 3,
+    "name": "Black Tea",
+    "price": 10,
+    "category": "Beverages",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 4,
+    "name": "Coffee",
+    "price": 15,
+    "category": "Beverages",
+    "isVeg": true,
+    "available": false
+  },
+  {
+    "id": 5,
+    "name": "Black Coffee",
+    "price": 15,
+    "category": "Beverages",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 6,
+    "name": "Cold Coffee",
+    "price": 20,
+    "category": "Beverages",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 7,
+    "name": "Lemon Juice",
+    "price": 15,
+    "category": "Beverages",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 8,
+    "name": "Chass",
+    "price": 15,
+    "category": "Beverages",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 9,
+    "name": "Poha",
+    "price": 20,
+    "category": "Snacks",
+    "isVeg": true,
+    "available": false
+  },
+  {
+    "id": 10,
+    "name": "Upama",
+    "price": 20,
+    "category": "Snacks",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 11,
+    "name": "Idli Sambhar",
+    "price": 30,
+    "category": "Snacks",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 12,
+    "name": "Misal Pav",
+    "price": 40,
+    "category": "Snacks",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 13,
+    "name": "Vada Usal Pav",
+    "price": 40,
+    "category": "Snacks",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 14,
+    "name": "Methi Paratha",
+    "price": 35,
+    "category": "Snacks",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 15,
+    "name": "Aloo Paratha",
+    "price": 40,
+    "category": "Snacks",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 16,
+    "name": "Sabudana Vada",
+    "price": 35,
+    "category": "Snacks",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 17,
+    "name": "Vada Pav",
+    "price": 20,
+    "category": "Snacks",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 18,
+    "name": "Samosa",
+    "price": 15,
+    "category": "Snacks",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 19,
+    "name": "Samosa Pav",
+    "price": 20,
+    "category": "Snacks",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 20,
+    "name": "Bread Pattice",
+    "price": 20,
+    "category": "Snacks",
+    "isVeg": true,
+    "available": false
+  },
+  {
+    "id": 21,
+    "name": "Kanda Bhajiee",
+    "price": 25,
+    "category": "Snacks",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 22,
+    "name": "Batata Bhajiee",
+    "price": 30,
+    "category": "Snacks",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 23,
+    "name": "Moong Dal Bhajiee",
+    "price": 40,
+    "category": "Snacks",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 24,
+    "name": "Manchurian",
+    "price": 20,
+    "category": "Snacks",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 25,
+    "name": "Chinese Bhel",
+    "price": 30,
+    "category": "Snacks",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 26,
+    "name": "Maggie",
+    "price": 25,
+    "category": "Snacks",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 27,
+    "name": "Masala Maggie",
+    "price": 30,
+    "category": "Snacks",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 28,
+    "name": "Veg Sandwich",
+    "price": 30,
+    "category": "Snacks",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 29,
+    "name": "Veg Cheese Sandwich",
+    "price": 40,
+    "category": "Snacks",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 30,
+    "name": "Dal",
+    "price": 50,
+    "category": "Lunch",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 31,
+    "name": "Chapati",
+    "price": 8,
+    "category": "Lunch",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 32,
+    "name": "Bhaji",
+    "price": 25,
+    "category": "Lunch",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 33,
+    "name": "Jeera Rice",
+    "price": 25,
+    "category": "Lunch",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 34,
+    "name": "Mini Thali",
+    "price": 50,
+    "category": "Lunch",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 35,
+    "name": "Full Thali",
+    "price": 80,
+    "category": "Lunch",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 36,
+    "name": "Special Thali",
+    "price": 125,
+    "category": "Lunch",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 37,
+    "name": "Pulav Rice Full",
+    "price": 75,
+    "category": "Lunch",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 38,
+    "name": "Pulav Rice Half",
+    "price": 40,
+    "category": "Lunch",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 39,
+    "name": "Fried Rice Full",
+    "price": 70,
+    "category": "Lunch",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 40,
+    "name": "Fried Rice Half",
+    "price": 50,
+    "category": "Lunch",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 41,
+    "name": "Noodles",
+    "price": 50,
+    "category": "Lunch",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 42,
+    "name": "Pasta",
+    "price": 50,
+    "category": "Lunch",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 43,
+    "name": "Boiled Egg",
+    "price": 15,
+    "category": "Lunch",
+    "isVeg": false,
+    "available": true
+  },
+  {
+    "id": 44,
+    "name": "Omlette Pav Single Egg",
+    "price": 40,
+    "category": "Lunch",
+    "isVeg": false,
+    "available": true
+  },
+  {
+    "id": 45,
+    "name": "Omlette Pav Double Egg",
+    "price": 60,
+    "category": "Lunch",
+    "isVeg": false,
+    "available": true
+  },
+  {
+    "id": 46,
+    "name": "Anda Bhurji Single Egg",
+    "price": 50,
+    "category": "Lunch",
+    "isVeg": false,
+    "available": true
+  },
+  {
+    "id": 47,
+    "name": "Anda Bhurji Double Egg",
+    "price": 60,
+    "category": "Lunch",
+    "isVeg": false,
+    "available": true
+  },
+  {
+    "id": 48,
+    "name": "Anda Curry (with 2 Eggs)",
+    "price": 70,
+    "category": "Lunch",
+    "isVeg": false,
+    "available": true
+  },
+  {
+    "id": 49,
+    "name": "Murmura Bhel",
+    "price": 20,
+    "category": "Snacks",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 50,
+    "name": "Boiled Chana Bhel",
+    "price": 30,
+    "category": "Snacks",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 51,
+    "name": "Sada Dosa",
+    "price": 60,
+    "category": "Snacks",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 52,
+    "name": "Masala Dosa",
+    "price": 60,
+    "category": "Snacks",
+    "isVeg": true,
+    "available": true
+  },
+  {
+    "id": 53,
+    "name": "Onion Uttapam",
+    "price": 40,
+    "category": "Snacks",
+    "isVeg": true,
+    "available": true
+  }
+]
