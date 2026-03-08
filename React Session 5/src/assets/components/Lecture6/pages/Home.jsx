@@ -1,17 +1,13 @@
 import React from 'react'
 
-const Lecture6 = () => {
-
-
-
-    
+const Home = () => {
   return (
     <>
     
-
+    <h1>Hell</h1>
     
     </>
   )
 }
 
-export default Lecture6
+export default Home

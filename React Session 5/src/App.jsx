@@ -12,6 +12,14 @@ import ApiComponent from './assets/components/Lecture5/apiComponent'
 import MemoMemo from './assets/components/Lecture5Practice/Lecture5Practice'
 
 import Lecture6Sample from './assets/components/Lecture6/Lecture6Sample'
+import { Link, Route, Router, Routes } from 'react-router-dom'
+import Home from './assets/components/Lecture6/pages/Home'
+import About from './assets/components/Lecture6/pages/About'
+import Contact from './assets/components/Lecture6/pages/Contact'
+import DashBoard from './assets/components/Lecture6/pages/DashBoard'
+import Login from './assets/components/Lecture6/pages/login'
+import ProtectDashboard from './assets/components/Lecture6/pages/ProtectDashBoard'
+import MainPage from './assets/components/Lecture6Practice/MainPage'
 
 function App() {
 
@@ -31,7 +39,34 @@ function App() {
       {/* <ApiComponent/> */}
       {/* <MemoMemo/> */}
       {/* <Lecture6/> */}
-      <Lecture6Sample/>
+      {/* <Lecture6Sample/> */}
+
+
+      {/* <div className='App'>
+
+        <nav>
+          <Link to ="/">Home</Link>
+          <Link to = '/about'>About</Link>
+          <Link to ="/contact">Contact</Link>
+        </nav>
+
+
+      <Routes>
+        <Route path='/' element={<Home/>} />
+        <Route path='/about' element={<About/>}/>
+        <Route path='/contact' element={<Contact/>}/>
+        <Route path = '/dashboard' element={
+          <ProtectDashboard>
+            <DashBoard/>
+          </ProtectDashboard>
+        }/>
+        <Route path = '/login' element = {<Login/>}/>
+      </Routes>
+
+      </div> */}
+
+      
+     <MainPage/>
 
     
     </>

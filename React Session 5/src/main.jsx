@@ -4,6 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import './assets/scss/global.scss'
 import MenuProvider from './assets/components/Lecture4Practice/Component1.jsx'
+import {BrowserRouter} from 'react-router-dom'
 
 // import ContextProvider from './assets/components/Lecture4/contextAPI/contextAPI.jsx'
 
@@ -13,7 +14,15 @@ createRoot(document.getElementById('root')).render(
    {/* <ContextProvider> */}
 
    {/* <MenuProvider> */}
-  <App />
+
+  
+<BrowserRouter>
+ <App />
+</BrowserRouter>
+ 
+
+
+
    {/* </MenuProvider> */}
 
    
