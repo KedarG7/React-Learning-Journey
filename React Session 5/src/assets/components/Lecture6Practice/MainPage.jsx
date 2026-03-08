@@ -24,7 +24,7 @@ const MainPage = () => {
 
     <Routes>
         <Route path ='/login' element = {<Login/>}/>
-        <Route path = '/home' element = {<Protect><Home/></Protect>} />
+        <Route path = '/home' element = {<Home/>}/>
         <Route path = '/contact' element = {<Protect><Contact/></Protect>}/>
         <Route path='/about' element = {<Protect><About/></Protect>}/>
     </Routes>
