@@ -9,6 +9,7 @@ import Component2 from './assets/components/Lecture4Practice/Component2'
 import Menucard from './assets/components/Lecture4Practice2/menucard'
 import Lecture5 from './assets/components/Lecture5/Lecture5'
 import ApiComponent from './assets/components/Lecture5/apiComponent'
+import MemoMemo from './assets/components/Lecture5Practice/Lecture5Practice'
 
 function App() {
 
@@ -26,7 +27,9 @@ function App() {
       {/* <Menucard/> */}
       {/* <Lecture5/> */}
 
-      <ApiComponent/>
+      {/* <ApiComponent/> */}
+
+      <MemoMemo/>
 
     
     </>
