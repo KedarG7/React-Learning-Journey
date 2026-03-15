@@ -20,6 +20,7 @@ import DashBoard from './assets/components/Lecture6/pages/DashBoard'
 import Login from './assets/components/Lecture6/pages/login'
 import ProtectDashboard from './assets/components/Lecture6/pages/ProtectDashBoard'
 import MainPage from './assets/components/Lecture6Practice/MainPage'
+import Navigation from './assets/components/Lecture6Practice2/Navigation'
 
 function App() {
 
@@ -66,7 +67,8 @@ function App() {
       </div> */}
 
       
-     <MainPage/>
+     {/* <MainPage/> */}
+     <Navigation/>
 
     
     </>
