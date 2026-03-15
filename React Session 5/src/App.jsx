@@ -19,7 +19,8 @@ import Contact from './assets/components/Lecture6/pages/Contact'
 import DashBoard from './assets/components/Lecture6/pages/DashBoard'
 import Login from './assets/components/Lecture6/pages/login'
 import ProtectDashboard from './assets/components/Lecture6/pages/ProtectDashBoard'
-import MainPage from './assets/components/Lecture6Practice/MainPage'
+// import MainPage from './assets/components/Lecture6Practice/MainPage'
+import MainPage from './assets/components/Lecture7/Lecture7'
 
 function App() {
 
@@ -66,6 +67,7 @@ function App() {
       </div> */}
 
       
+     {/* <MainPage/> */}
      <MainPage/>
 
     

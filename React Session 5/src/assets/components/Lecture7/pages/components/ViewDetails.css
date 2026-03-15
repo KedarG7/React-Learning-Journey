@@ -1,0 +1,7 @@
+.container{
+    width:800px;
+    height:70vh;
+    border:2px solid black;
+    box-sizing: border-box;
+    overflow: scroll;
+}
