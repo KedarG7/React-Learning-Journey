@@ -19,8 +19,13 @@ import Contact from './assets/components/Lecture6/pages/Contact'
 import DashBoard from './assets/components/Lecture6/pages/DashBoard'
 import Login from './assets/components/Lecture6/pages/login'
 import ProtectDashboard from './assets/components/Lecture6/pages/ProtectDashBoard'
+<<<<<<< HEAD
 import MainPage from './assets/components/Lecture6Practice/MainPage'
 import Navigation from './assets/components/Lecture6Practice2/Navigation'
+=======
+// import MainPage from './assets/components/Lecture6Practice/MainPage'
+import MainPage from './assets/components/Lecture7/Lecture7'
+>>>>>>> d2b5776cce0cf780905b11f926363ff5fe5f8ac4
 
 function App() {
 
@@ -68,7 +73,11 @@ function App() {
 
       
      {/* <MainPage/> */}
+<<<<<<< HEAD
      <Navigation/>
+=======
+     <MainPage/>
+>>>>>>> d2b5776cce0cf780905b11f926363ff5fe5f8ac4
 
     
     </>
