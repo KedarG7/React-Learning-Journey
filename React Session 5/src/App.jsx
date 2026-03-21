@@ -21,7 +21,7 @@ import Login from './assets/components/Lecture6/pages/login'
 import ProtectDashboard from './assets/components/Lecture6/pages/ProtectDashBoard'
 import MainPage from './assets/components/Lecture6Practice/MainPage'
 import Navigation from './assets/components/Lecture6Practice2/Navigation'
-import Registration from './assets/components/Lecture8/Registration'
+import Registration from './assets/components/Lecture8Practice2/Registration'
 import Form from './assets/components/Lecture8Practice/Form'
 
 function App() {
@@ -72,7 +72,8 @@ function App() {
      {/* <MainPage/> */}
      {/* <Navigation/> */}
      {/* <Registration/> */}
-     <Form/>
+     {/* <Form/> */}
+     <Registration/>
 
     
     </>
