@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 *{
     margin:0px;
     padding:0px;
     box-sizing: border-box;
+    font-family: Montserrat;
 }
 #form1{
     background-color:#faead6 ;
@@ -9,4 +13,43 @@
     border-radius: 24px ;
     padding: 12px;
     height:80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+input{
+    width:320px;
+    height:56px;
+    border-radius: 8px;
+    border: transparent;
+    padding: 0px 8px;
+    box-shadow: #fdd4a3 4px 4px ;
+    font-size: 18px;
+   
+    
+}
+select{
+    width:240px;
+    height:56px;
+    border-radius: 8px;
+    border: transparent;
+    font-size:18px ;
+    font-weight: 500;
+}
+button{
+    width:132px;
+    border-radius:8px;
+    height:56px;
+    border: transparent;
+    font-size: 18px;
+    background-color: #fdd4a3;
+    box-shadow: rgb(22, 104, 218) 1px 1px 5px 2px;
+    color:whitesmoke;
+    transition: ease-in-out 0.2s all;
+}
+button:hover{
+    color:greenyellow;
+    background-color: green;
+    
 }

@@ -1,9 +1,19 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Formik } from 'formik';
+import '../Lecture8Practice2/Registration.css'
+import axios from 'axios'
+import { useRef } from 'react';
 
 
 
 const Registration = () => {
+
+
+const useReference = useRef()
+
+useEffect(()=>{
+  useReference.current.focus()
+},[])
   // STATE DATA --------------------------(ARRAY - To be maped)
 
   const state = [
@@ -27,53 +37,57 @@ const Registration = () => {
   const city = [
     {
       stateid: 1,
-      cityid: 1,
+      cityid: 11,
       name: "Mumbai",
     },
     {
       stateid: 1,
-      cityid: 2,
+      cityid: 22,
       name: "Pune",
     },
     {
       stateid: 1,
-      cityid: 3,
+      cityid: 33,
       name: "Nagpur",
     },
     {
       stateid: 2,
-      cityid: 1,
+      cityid: 12,
       name: "Indore",
     },
     {
       stateid: 2,
-      cityid: 2,
+      cityid: 22,
       name: "Bhopal",
     },
     {
       stateid: 2,
-      cityid: 3,
+      cityid: 33,
       name: "Jabalpur",
     },
     {
       stateid: 3,
-      cityid: 1,
+      cityid: 11,
       name: "Panji",
     },
     {
       stateid: 3,
-      cityid: 2,
+      cityid: 22,
       name: "Vaso Da Gama",
     },
     {
       stateid: 3,
-      cityid: 3,
+      cityid: 33,
       name: "Margao",
     },
   ];
   // --------------------------------------------------
 
-  const [changeState,setchangeState] = useState('')
+  const [changeState,setchangeState] = useState()
+  console.log(typeof(changeState))
+
+const citynames = city.filter((e)=>e.stateid === Number(changeState))
+console.log(citynames)
 
 
   return (
@@ -91,11 +105,15 @@ const Registration = () => {
           }
           return errors;
         }}
-        onSubmit={(values, { setSubmitting }) => {
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
-            setSubmitting(false);
-          }, 400);
+        onSubmit={async (values, { setSubmitting,resetForm }) => {
+          console.log(values)
+          try{
+          const response = await axios.post(`https`,values)
+          console.log(response);
+          resetForm('')
+          }catch(error){
+          console.log(error,'error')
+          }
         }}
       >
         {({
@@ -109,17 +127,22 @@ const Registration = () => {
           /* and other goodies */
         }) => (
           <form onSubmit={handleSubmit} id="form1">
+        
             <input
+              ref={useReference}
               type="email"
               name="email"
               onChange={handleChange}
               onBlur={handleBlur}
               value={values.email}
-              className="mx-auto flex max-w-sm items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10"
+              
             />
+            <br />
+            <h3>Email ID</h3>
             {errors.email && touched.email && errors.email}
             <br />
             <br />
+          
             <input
               type="password"
               name="password"
@@ -127,19 +150,19 @@ const Registration = () => {
               onBlur={handleBlur}
               value={values.password}
             />
-            {errors.password && touched.password && errors.password}
             <br />
+              <h3>Password</h3>
+            {errors.password && touched.password && errors.password}
             <br />
             <br />
 
             {/* ------------------------------ STATE ----------------------------------------------- */}
             <select
-              type=""
               name="state"
               onChange={(e) => {
                 handleChange(e);
                 setchangeState(e.target.value);
-                //  console.log(e.target.value)
+               
               }}
               onBlur={handleBlur}
               value={values.state}
@@ -161,32 +184,43 @@ const Registration = () => {
             {/* ----------------------------------- CITY ------------------------------------------ */}
 
             <select
-              type=""
+              
               name="city"
               onChange={handleChange}
               onBlur={handleBlur}
               value={values.city}
             >
-              <option value="">Select City</option>
-              {city
-                .filter((e) => e.stateid == changeState)
-                .map((e) => {
-                  return (
-                    <option value={e.cityid} key={e.cityid}>
-                      {e.name}
-                    </option>
-                  );
-                })}
+              <option>Select City</option>
+
+              {
+                citynames.map((e)=>{
+                  return(
+                    <option value={e.cityid} key={e.cityid}>{e.name}</option>
+                  )
+                })
+              }
+              
             </select>
 
             {/* ----------------------------------------------------------------------------- */}
 
             <br />
             <br />
+            {/* ----------------------------------------------------------------------------- */}
+              <input type="radio" id='male' name='gender' value="male" onChange={handleChange}
+              onBlur={handleBlur} checked = {values.gender === "male" }
+/>
+              <label htmlFor="male">Male</label>
+              <input type="radio" id='female' name='gender' value="female"onChange={handleChange}
+              onBlur={handleBlur} checked = {values.gender === "female"}
+/>
+              <label htmlFor="female">Female</label>
+            {/* ----------------------------------------------------------------------------- */}
+
+
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition"
             >
               Submit
             </button>
