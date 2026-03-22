@@ -1,4 +1,5 @@
 import './App.css'
+import "./index.css";
 import Counter from './assets/components/Lecture1/counter'
 import Card from './assets/components//Lecture1/card'
 import Lecture2 from './assets/components/Lecture2/Lecture2'

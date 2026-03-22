@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Formik } from 'formik';
 
+
+
 const Registration = () => {
   // STATE DATA --------------------------(ARRAY - To be maped)
 
@@ -77,7 +79,7 @@ const Registration = () => {
   return (
     <>
       <Formik
-        initialValues={{ email: "", password: "" }}
+        initialValues={{ email: "", password: "", state: "", city: "" }}
         validate={(values) => {
           const errors = {};
           if (!values.email) {
@@ -106,13 +108,14 @@ const Registration = () => {
           isSubmitting,
           /* and other goodies */
         }) => (
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} id="form1">
             <input
               type="email"
               name="email"
               onChange={handleChange}
               onBlur={handleBlur}
               value={values.email}
+              className="mx-auto flex max-w-sm items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10"
             />
             {errors.email && touched.email && errors.email}
             <br />
@@ -128,16 +131,18 @@ const Registration = () => {
             <br />
             <br />
             <br />
+
+            {/* ------------------------------ STATE ----------------------------------------------- */}
             <select
               type=""
               name="state"
               onChange={(e) => {
                 handleChange(e);
                 setchangeState(e.target.value);
-                // console.log(e.target.value)
+                //  console.log(e.target.value)
               }}
               onBlur={handleBlur}
-              value={values.value}
+              value={values.state}
             >
               <option value=" ">Select State</option>
               {state.map((state) => {
@@ -148,25 +153,41 @@ const Registration = () => {
                 );
               })}
             </select>
+
+            {/* ----------------------------------------------------------------------------- */}
+
             <br />
             <br />
+            {/* ----------------------------------- CITY ------------------------------------------ */}
+
             <select
               type=""
               name="city"
               onChange={handleChange}
               onBlur={handleBlur}
-              value={values.value}
+              value={values.city}
             >
               <option value="">Select City</option>
-              {city.map((city)=>{
-                return (
-                  <option value="">{city.name}</option>
-                )
-              })}
+              {city
+                .filter((e) => e.stateid == changeState)
+                .map((e) => {
+                  return (
+                    <option value={e.cityid} key={e.cityid}>
+                      {e.name}
+                    </option>
+                  );
+                })}
             </select>
+
+            {/* ----------------------------------------------------------------------------- */}
+
             <br />
             <br />
-            <button type="submit" disabled={isSubmitting}>
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition"
+            >
               Submit
             </button>
           </form>
