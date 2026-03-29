@@ -5,6 +5,8 @@ import App from './App.jsx'
 import './assets/scss/global.scss'
 import MenuProvider from './assets/components/Lecture4Practice/Component1.jsx'
 import {BrowserRouter} from 'react-router-dom'
+import store from './assets/components/Lecture10/Store.jsx'
+import { Provider } from 'react-redux'
 
 // import ContextProvider from './assets/components/Lecture4/contextAPI/contextAPI.jsx'
 
@@ -15,11 +17,14 @@ createRoot(document.getElementById('root')).render(
 
    {/* <MenuProvider> */}
 
-  
+<Provider store = {store}>
+
+
 <BrowserRouter>
  <App />
 </BrowserRouter>
  
+ </Provider>
 
 
 
@@ -29,4 +34,5 @@ createRoot(document.getElementById('root')).render(
 
    {/* </ContextProvider> */}
   </StrictMode>,
+  
 )

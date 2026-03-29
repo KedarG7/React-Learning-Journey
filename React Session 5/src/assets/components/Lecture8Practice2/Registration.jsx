@@ -1,19 +1,15 @@
-import React, { useEffect, useState } from 'react'
-import { Formik } from 'formik';
-import '../Lecture8Practice2/Registration.css'
-import axios from 'axios'
-import { useRef } from 'react';
-
-
+import React, { useEffect, useState } from "react";
+import { Formik } from "formik";
+import "../Lecture8Practice2/Registration.css";
+import axios from "axios";
+import { useRef } from "react";
 
 const Registration = () => {
+  const useReference = useRef();
 
-
-const useReference = useRef()
-
-useEffect(()=>{
-  useReference.current.focus()
-},[])
+  useEffect(() => {
+    useReference.current.focus();
+  }, []);
   // STATE DATA --------------------------(ARRAY - To be maped)
 
   const state = [
@@ -83,17 +79,28 @@ useEffect(()=>{
   ];
   // --------------------------------------------------
 
-  const [changeState,setchangeState] = useState()
-  console.log(typeof(changeState))
+  // Subjects
 
-const citynames = city.filter((e)=>e.stateid === Number(changeState))
-console.log(citynames)
+  const subjects = ["Maths", "Physics", "Science", "Home Science"];
 
+  // --------------------------------------------------
+
+  const [changeState, setchangeState] = useState();
+  console.log(typeof changeState);
+
+  const citynames = city.filter((e) => e.stateid === Number(changeState));
+  console.log(citynames);
 
   return (
     <>
       <Formik
-        initialValues={{ email: "", password: "", state: "", city: "" }}
+        initialValues={{
+          email: "",
+          password: "",
+          state: "",
+          city: "",
+          subjects: "",
+        }}
         validate={(values) => {
           const errors = {};
           if (!values.email) {
@@ -105,14 +112,14 @@ console.log(citynames)
           }
           return errors;
         }}
-        onSubmit={async (values, { setSubmitting,resetForm }) => {
-          console.log(values)
-          try{
-          const response = await axios.post(`https`,values)
-          console.log(response);
-          resetForm('')
-          }catch(error){
-          console.log(error,'error')
+        onSubmit={async (values, { setSubmitting, resetForm }) => {
+          console.log(values);
+          try {
+            const response = await axios.post(`https`, values);
+            console.log(response);
+            resetForm("");
+          } catch (error) {
+            console.log(error, "error");
           }
         }}
       >
@@ -127,7 +134,6 @@ console.log(citynames)
           /* and other goodies */
         }) => (
           <form onSubmit={handleSubmit} id="form1">
-        
             <input
               ref={useReference}
               type="email"
@@ -135,14 +141,13 @@ console.log(citynames)
               onChange={handleChange}
               onBlur={handleBlur}
               value={values.email}
-              
             />
             <br />
             <h3>Email ID</h3>
             {errors.email && touched.email && errors.email}
             <br />
             <br />
-          
+
             <input
               type="password"
               name="password"
@@ -151,7 +156,7 @@ console.log(citynames)
               value={values.password}
             />
             <br />
-              <h3>Password</h3>
+            <h3>Password</h3>
             {errors.password && touched.password && errors.password}
             <br />
             <br />
@@ -162,7 +167,6 @@ console.log(citynames)
               onChange={(e) => {
                 handleChange(e);
                 setchangeState(e.target.value);
-               
               }}
               onBlur={handleBlur}
               value={values.state}
@@ -184,7 +188,6 @@ console.log(citynames)
             {/* ----------------------------------- CITY ------------------------------------------ */}
 
             <select
-              
               name="city"
               onChange={handleChange}
               onBlur={handleBlur}
@@ -192,14 +195,13 @@ console.log(citynames)
             >
               <option>Select City</option>
 
-              {
-                citynames.map((e)=>{
-                  return(
-                    <option value={e.cityid} key={e.cityid}>{e.name}</option>
-                  )
-                })
-              }
-              
+              {citynames.map((e) => {
+                return (
+                  <option value={e.cityid} key={e.cityid}>
+                    {e.name}
+                  </option>
+                );
+              })}
             </select>
 
             {/* ----------------------------------------------------------------------------- */}
@@ -207,21 +209,54 @@ console.log(citynames)
             <br />
             <br />
             {/* ----------------------------------------------------------------------------- */}
-              <input type="radio" id='male' name='gender' value="male" onChange={handleChange}
-              onBlur={handleBlur} checked = {values.gender === "male" }
-/>
-              <label htmlFor="male">Male</label>
-              <input type="radio" id='female' name='gender' value="female"onChange={handleChange}
-              onBlur={handleBlur} checked = {values.gender === "female"}
-/>
-              <label htmlFor="female">Female</label>
+            <input
+              type="radio"
+              id="male"
+              name="gender"
+              value="male"
+              onChange={handleChange}
+              onBlur={handleBlur}
+              checked={values.gender === "male"}
+            />
+            <label htmlFor="male">Male</label>
+            <input
+              type="radio"
+              id="female"
+              name="gender"
+              value="female"
+              onChange={handleChange}
+              onBlur={handleBlur}
+              checked={values.gender === "female"}
+            />
+            <label htmlFor="female">Female</label>
             {/* ----------------------------------------------------------------------------- */}
 
+            <div className="check">
+              {/* <div><input type="checkbox"  name='subjects' id='maths'/><label htmlFor="maths">Maths</label></div> 
+    <div><input type="checkbox" name='subjects' id='physics'/><label htmlFor="physics">Physics</label></div> 
+    <div><input type="checkbox" name='subjects' id='science'/><label htmlFor="science">Science</label></div> 
+             */}
 
-            <button
-              type="submit"
-              disabled={isSubmitting}
-            >
+              <h4>Subject</h4>
+              {subjects.map((e) => {
+                return (
+                  <div key={e}>
+                    <input
+                      type="checkbox"
+                      name="subject"
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      value={e}
+                      id={e}
+                      checked={values.subjects.includes(e)}
+                    />
+                    <label htmlFor={e}>{e}</label>
+                  </div>
+                );
+              })}
+            </div>
+
+            <button type="submit" disabled={isSubmitting}>
               Submit
             </button>
           </form>
@@ -229,8 +264,6 @@ console.log(citynames)
       </Formik>
     </>
   );
- 
- 
-}
+};
 
-export default Registration
+export default Registration;

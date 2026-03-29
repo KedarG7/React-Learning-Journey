@@ -24,6 +24,7 @@ import MainPage from './assets/components/Lecture6Practice/MainPage'
 import Navigation from './assets/components/Lecture6Practice2/Navigation'
 import Registration from './assets/components/Lecture8Practice2/Registration'
 import Form from './assets/components/Lecture8Practice/Form'
+import GetBook from './assets/components/Lecture10/GetBook';
 
 function App() {
 
@@ -75,6 +76,7 @@ function App() {
      {/* <Registration/> */}
      {/* <Form/> */}
      <Registration/>
+     <GetBook/>
 
     
     </>
