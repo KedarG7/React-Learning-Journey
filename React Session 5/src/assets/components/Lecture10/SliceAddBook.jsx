@@ -16,4 +16,24 @@ const SliceAddBook = createSlice({
     }
 });
 export const {addBook,removeBook} = SliceAddBook.actions
-export default SliceAddBook.reducer
+export const SliceAddBookProvider = SliceAddBook.reducer
+
+const multipl = createSlice({
+   name:'mul',
+   initialState:{
+    value:10
+   },
+   reducers:{
+    multipleFun(s){
+        s.value *=2
+    }
+   }
+})
+
+export const {multipleFun} = multipl.actions
+export const SliceMulProvider = multipl.reducer
+
+
+
+
+// export default SliceAddBook.reducer ( if only single is to be exported)

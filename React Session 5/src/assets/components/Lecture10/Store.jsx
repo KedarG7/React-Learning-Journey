@@ -1,10 +1,13 @@
 
 import { configureStore } from "@reduxjs/toolkit";
-import SliceProvider from './SliceAddBook';
+import {SliceAddBookProvider,SliceMulProvider} from './SliceAddBook';
+import UserApifetchData from "../Lecture11/userSliceApis/userSliceApi";
 
 const store = configureStore({
     reducer:{
-        totalBook:SliceProvider,
+        totalBook:SliceAddBookProvider,
+        mul:SliceMulProvider,
+        aapi:UserApifetchData
     }
 });
 

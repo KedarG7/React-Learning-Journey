@@ -25,6 +25,7 @@ import Navigation from './assets/components/Lecture6Practice2/Navigation'
 import Registration from './assets/components/Lecture8Practice2/Registration'
 import Form from './assets/components/Lecture8Practice/Form'
 import GetBook from './assets/components/Lecture10/GetBook';
+import GetInfo from './assets/components/Lecture11/GetInfo';
 
 function App() {
 
@@ -75,8 +76,9 @@ function App() {
      {/* <Navigation/> */}
      {/* <Registration/> */}
      {/* <Form/> */}
-     <Registration/>
-     <GetBook/>
+     {/* <Registration/> */}
+     {/* <GetBook/> */}
+     <GetInfo/>
 
     
     </>
