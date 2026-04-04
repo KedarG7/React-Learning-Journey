@@ -11,6 +11,8 @@ const GetBook = () => {
         {book}
         <button onClick={()=> dispatch(addBook())}>Add Book</button>
         <button onClick={()=>dispatch(removeBook())}>Remove Book</button>
+        <button onClick={()=>dispatch(removeBook())}>Remove Book</button>
+
         <br />
         {mulData}
         <button onClick={()=>dispatch(multipleFun())}>Multiple</button>
