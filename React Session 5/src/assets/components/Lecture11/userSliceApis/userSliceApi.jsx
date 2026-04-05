@@ -1,14 +1,22 @@
 
 import { fetchDataUser } from "../userAPIs/UserApi"
-import {createSlice,createAsyncThunk} from '../userAPIs/UserApi'
+import {createSlice,createAsyncThunk} from '@reduxjs/toolkit'
 
 export const fetchData = createAsyncThunk(
     'user/fetchapi',
     async ()=>{
+        console.log()
         const data = await fetchDataUser()
         return data
     }
 )
+// export const getDataById = createAsyncThunk(
+//    'user/fetchapi2',
+//    async (e)=>{
+//     console.log(e)
+//    }
+// )
+// console.log(fetchData)
 
 const UserApifetchData = createSlice({
     name:"user",
@@ -23,7 +31,7 @@ const UserApifetchData = createSlice({
         .addCase(fetchData.pending,(state)=>{
             state.loading = true;
         })
-        .addCase(fetchData.fullfilled,(state,action)=>{
+        .addCase(fetchData.fulfilled,(state,action)=>{
             state.loading = false
             state.user = action.payload;
         })

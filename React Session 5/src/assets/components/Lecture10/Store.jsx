@@ -7,7 +7,7 @@ const store = configureStore({
     reducer:{
         totalBook:SliceAddBookProvider,
         mul:SliceMulProvider,
-        aapi:UserApifetchData
+        user:UserApifetchData
     }
 });
 
