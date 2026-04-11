@@ -1,5 +1,6 @@
 import './App.css'
 import "./index.css";
+
 import Counter from './assets/components/Lecture1/counter'
 import Card from './assets/components//Lecture1/card'
 import Lecture2 from './assets/components/Lecture2/Lecture2'
@@ -27,6 +28,9 @@ import Form from './assets/components/Lecture8Practice/Form'
 import GetBook from './assets/components/Lecture10/GetBook';
 import GetInfo from './assets/components/Lecture11/Lecture12';
 import Lecture12 from './assets/components/Lecture11/Lecture12';
+import Lecture13Component1 from './assets/components/Lecture13/Lecture13Component1';
+// import {FetchDataById} from './assets/components/Lecture13/Lecture13';
+
 
 function App() {
 
@@ -79,8 +83,9 @@ function App() {
      {/* <Form/> */}
      {/* <Registration/> */}
      {/* <GetBook/> */}
-     <Lecture12/>
-
+     {/* <Lecture12/> */}
+     {/* <FetchDataById/> */}
+      <Lecture13Component1/>
     
     </>
   )
