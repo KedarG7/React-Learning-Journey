@@ -29,7 +29,9 @@ import GetBook from './assets/components/Lecture10/GetBook';
 import GetInfo from './assets/components/Lecture11/Lecture12';
 import Lecture12 from './assets/components/Lecture11/Lecture12';
 import Lecture13Component1 from './assets/components/Lecture13/Lecture13Component1';
+import Navbarr from './assets/components/Navbarr/Navbarr';
 // import {FetchDataById} from './assets/components/Lecture13/Lecture13';
+import Home1 from './assets/components/Navbarr/Home';
 
 
 function App() {
@@ -53,19 +55,21 @@ function App() {
       {/* <Lecture6Sample/> */}
 
 
-      {/* <div className='App'>
+       <div className='App'>
 
-        <nav>
+        {/* <nav>
           <Link to ="/">Home</Link>
-          <Link to = '/about'>About</Link>
+         <Link to = '/about'>About</Link>
           <Link to ="/contact">Contact</Link>
-        </nav>
+        </nav> */}
+
 
 
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/about' element={<About/>}/>
         <Route path='/contact' element={<Contact/>}/>
+        <Route path='/boots' element={<Home1/>}/>
         <Route path = '/dashboard' element={
           <ProtectDashboard>
             <DashBoard/>
@@ -74,7 +78,7 @@ function App() {
         <Route path = '/login' element = {<Login/>}/>
       </Routes>
 
-      </div> */}
+      </div> 
 
       
      {/* <MainPage/> */}
@@ -85,7 +89,8 @@ function App() {
      {/* <GetBook/> */}
      {/* <Lecture12/> */}
      {/* <FetchDataById/> */}
-      <Lecture13Component1/>
+      {/* <Lecture13Component1/> */}
+      <Navbarr/>
     
     </>
   )

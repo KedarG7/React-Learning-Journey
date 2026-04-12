@@ -8,6 +8,11 @@ import { BrowserRouter } from "react-router-dom";
 import store from "./assets/components/Lecture10/Store.jsx";
 import { Provider } from "react-redux";
 
+{
+  /* The following line can be included in your src/index.js or App.js file */
+}
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 // import ContextProvider from './assets/components/Lecture4/contextAPI/contextAPI.jsx'
 
 createRoot(document.getElementById("root")).render(
